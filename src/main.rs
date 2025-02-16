@@ -81,10 +81,10 @@ impl Cli_input{
             
             let status: Option<Status> = if args.len() > 2 {
                 match args[2].to_lowercase().as_str() {
-                    "NotStarted" => Some(Status::NotStarted),
-                    "InProgress" => Some(Status::InProgress),
-                    "Completed" => Some(Status::Completed),
-                    _ => Some(Status::NotStarted),
+                    "notstarted" => Some(Status::NotStarted),
+                    "inprogress" => Some(Status::InProgress),
+                    "completed" => Some(Status::Completed),
+                    &_ => Some(Status::NotStarted),
                 }
             } else {
                 None
